@@ -204,10 +204,20 @@ label {
 .total-last {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 18px;
     background-color: #f0f0f0;
     margin-top: 20px;
     border-radius: 5px;
+}
+.seat-amount-cont{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.total-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .total-last div {
