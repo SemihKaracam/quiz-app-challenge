@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uçak Koltuk Yapısı</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="seats-grid" id="seatsGrid">
+            </div>
+            <div class="seats">
+                <div class="seat-container">
+                    <div class="seat-icon full"></div>
+                    <span>Dolu</span>
+                </div>
+                <div class="seat-container">
+                    <div class="seat-icon selected"></div>
+                    <span>Seçili</span>
+                </div>
+                <div class="seat-container">
+                    <div class="seat-icon empty"></div>
+                    <span>Boş</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-container">
+            <button class="accordion">1. Yolcu</button>
+            <div class="panel">
+                <div>
+                    <label>İsim</label>
+                    <input type="text" placeholder="İsim giriniz" />
+                </div>
+                <div>
+                    <label>Soyisim</label>
+                    <input type="text" placeholder="Soyisim giriniz" />
+                </div>
+                <div>
+
+                    <label>Telefon</label>
+                    <input type="number" placeholder="Telefon numarası giriniz" />
+                </div>
+
+                <div>
+                    <label>E-posta</label>
+                    <input type="email" placeholder="E-posta adresi giriniz" />
+                </div>
+
+                <div>
+                    <label>Cinsiyet</label>
+                    <select>
+                        <option value="">Seçiniz</option>
+                        <option value="Erkek">Erkek</option>
+                        <option value="Kadın">Kadın</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Doğum Tarihi</label>
+                    <input type="date" />
+                </div>
+            </div>
+
+            <button class="accordion">2. Yolcu</button>
+            <div class="panel">
+                <div>
+                    <label>İsim</label>
+                    <input type="text" placeholder="İsim giriniz" />
+                </div>
+                <div>
+                    <label>Soyisim</label>
+                    <input type="text" placeholder="Soyisim giriniz" />
+                </div>
+                <div>
+
+                    <label>Telefon</label>
+                    <input type="number" placeholder="Telefon numarası giriniz" />
+                </div>
+
+                <div>
+                    <label>E-posta</label>
+                    <input type="email" placeholder="E-posta adresi giriniz" />
+                </div>
+
+                <div>
+                    <label>Cinsiyet</label>
+                    <select>
+                        <option value="">Seçiniz</option>
+                        <option value="Erkek">Erkek</option>
+                        <option value="Kadın">Kadın</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Doğum Tarihi</label>
+                    <input type="date" />
+                </div>
+            </div>
+
+            <button class="accordion">3. Yolcu</button>
+            <div class="panel">
+                <div>
+                    <label>İsim</label>
+                    <input type="text" placeholder="İsim giriniz" />
+                </div>
+                <div>
+                    <label>Soyisim</label>
+                    <input type="text" placeholder="Soyisim giriniz" />
+                </div>
+                <div>
+
+                    <label>Telefon</label>
+                    <input type="number" placeholder="Telefon numarası giriniz" />
+                </div>
+
+                <div>
+                    <label>E-posta</label>
+                    <input type="email" placeholder="E-posta adresi giriniz" />
+                </div>
+
+                <div>
+                    <label>Cinsiyet</label>
+                    <select>
+                        <option value="">Seçiniz</option>
+                        <option value="Erkek">Erkek</option>
+                        <option value="Kadın">Kadın</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Doğum Tarihi</label>
+                    <input type="date" />
+                </div>
+            </div>
+            <button id="completeBtn" style="padding: 20px; margin-top: 10px; cursor: pointer; font-size: 16px;">
+                İşlemleri Tamamla
+            </button>
+            <div class="total-last" style="font-size: 18px; font-weight: bold;">
+                <div>
+                    <span id="selectedSeatsDisplay"></span> <!-- Display selected seat numbers -->
+                </div>
+                <div>
+                    <div>Seçilen Koltuklar:</div>
+                    <span id="totalAmount">0</span> TL
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+
+</body>
+
+</html>

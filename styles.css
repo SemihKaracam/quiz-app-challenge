@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 200px;
+    width: 100%;
+    /* height: 100vh; */
+    box-sizing: border-box;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.container {
+    /* padding-top: 200px; */
+    display: flex;
+    width: 60%;
+    gap: 120px;
+}
+
+
+.seats {
+    display: flex;
+    gap: 28px;
+
+}
+
+.seat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.seat-icon {
+    height: 16px;
+    width: 12px;
+    border: 1px solid #C7C7C7;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    /* Tooltip için referans */
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: -35px;
+    /* Koltuk ikonunun altına yerleştirir */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    /* Yazı boyutunu büyüttük */
+    padding: 6px 10px;
+    /* İç boşluk büyütüldü */
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    /* Hafif gölge ekleyerek görselliği artırdık */
+}
+
+.seat-icon:hover .tooltip {
+    visibility: visible;
+}
+
+
+
+.seats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 20px);
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-left: 32px;
+}
+
+/* .full {
+    background-color: #E5E5E5;
+}
+
+.selected {
+    background-color: #FFC95C;
+} */
+
+.seat-icon.full {
+    background-color: #E5E5E5;
+    /* Dolu koltuk rengi */
+    cursor: not-allowed;
+    /* Dolu koltuklar seçilemez */
+}
+
+.seat-icon.selected {
+    background-color: #FFC95C !important;
+    /* Seçili koltuk rengi */
+    border-color: #FFC95C;
+    /* Seçili koltuk sınırı */
+}
+
+.empty {
+    background-color: #F7F7F7;
+}
+
+
+
+.accordion-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion {
+    position: relative;
+    background-color: #C6C6C6;
+    color: #333;
+    cursor: pointer;
+    padding: 20px;
+    margin: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.accordion:hover {
+    background-color: #ddd;
+}
+
+
+.accordion::after {
+    content: '\2192';
+    /* Sağ ok */
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Ok'u başlıkla hizalamak için */
+    transition: transform 0.3s ease;
+}
+
+/* Accordion açıldığında ok simgesini aşağıya çevir */
+.accordion.active::after {
+    transform: rotate(90deg) translateY(-50%);
+    /* 90 derece döndürerek aşağı ok yapıyoruz */
+}
+
+.panel {
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.panel input,
+.panel select {
+    width: 90%;
+    padding: 8px;
+}
+
+.panel div{
+    width: 46%;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+
+.active {
+    background-color: #ccc;
+}
+
+#completeBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#completeBtn:hover {
+    background-color: #218838;
+}
+
+/* .total-last{
+    background-color: #C6C6C6;
+    padding: 48px;
+    
+} */
+
+.total-last {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.total-last div {
+    display: flex;
+    align-items: center;
+}
+
+.total-last span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#selectedSeatsDisplay {
+    display: flex;
+    gap: 10px;
+}
