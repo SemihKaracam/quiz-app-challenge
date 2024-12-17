@@ -1,3 +1,3 @@
-Website Linki -> [https://baykar-quiz-app-pink.vercel.app/]
+Website Linki -> https://baykar-quiz-app-pink.vercel.app/
 
 
